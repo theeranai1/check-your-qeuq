@@ -1,0 +1,186 @@
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('IMG_8816.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+}
+.info-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  min-height: 350px; /* เพิ่มความสูงให้กล่อง */
+  line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับกล่องข้อมูล */
+  }
+}
+
+.info-box .row {
+  margin-bottom: 15px;
+}
+
+.info-box .value {
+  font-size: 16px;
+  color: #333;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.info-box .row label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.notice {
+  margin-top: 20px;
+  font-size: 14px; /* ขนาดตัวอักษรของคำชี้แจง */
+  color: #e74c3c; /* สีข้อความ */
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.8; /* ให้ระยะห่างของคำชี้แจงดีขึ้น */
+  padding-top: 10px;
+  border-top: 2px solid #e74c3c; /* เส้นแบ่งเพื่อแยกคำชี้แจง */
+  margin-top: 25px;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #4E1F00;
+}
+
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.search-icon {
+  width: 30px; /* ขนาดไอคอน */
+  height: 30px;
+  cursor: pointer;
+  margin-top: 1px; /* ปรับตำแหน่งให้อยู่ต่ำลง */
+}
+
+.search-container input {
+  padding: 10px;
+  width: 180px; /* ขนาดเริ่มต้นที่ย่อไว้ */
+  font-size: 16px;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  border-radius: 30px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #4E1F00;
+  transition: width 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+.search-container input:focus {
+  width: 250px;
+  outline: none;
+  padding: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+}
+
+.material-icons {
+  font-size: 24px;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.info-box {
+  background-color: rgba(128, 128, 128, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  margin: 20px auto;
+  color: white;
+  font-size: 14px;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  opacity: 0; /* เริ่มต้นให้ซ่อน */
+  animation: fadeIn 1s forwards; /* ใช้การอนิเมชั่น fadeIn */
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0; /* เริ่มต้นที่ความไม่ชัดเจน */
+  }
+  100% {
+      opacity: 1; /* จบที่ความชัดเจน */
+  }
+}
+
+.info-box .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.info-box .row label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.info-box .row .value {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-size: 12px; /* ขนาดฟอนต์เล็กลง */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease-in-out;
+}/* เพิ่มการเคลื่อนไหวเมื่อแตะ */
+
+.footer p {
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+.contact-links {
+  margin-top: 4px;
+}
+
+.contact-links a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.contact-links .contact-icon img,
+.contact-links .social-icon img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.contact-links .contact-icon img:hover,
+.contact-links .social-icon img:hover {
+  transform: scale(1.1);
+}
