@@ -79,7 +79,8 @@
                         const row = rows[i];
                         const customerPhone = row[5];  // เบอร์โทรศัพท์
                         const name = row[1];  // ชื่อ
-                        const numberOfCustomers = row[4]; // จำนวนลูกค้าจาก row[5]
+                        const numberOfCustomers = row[4]; // จำนวนลูกค้า
+                        const time = row[7] || "ไม่ระบุ"; // เวลา (ดึงข้อมูลจาก row[7])
                         let status = 'รอดำเนินการ';
 
                         if (!customerPhone || !name || customerPhone === "" || name === "") {
@@ -95,12 +96,12 @@
                         }
 
                         if (status === 'รอดำเนินการ') {
-                            queueStatus.push({phone: customerPhone, name: name, status: status, rowIndex: i, numberOfCustomers: numberOfCustomers});
+                            queueStatus.push({phone: customerPhone, name: name, status: status, rowIndex: i, numberOfCustomers: numberOfCustomers, time: time});
                         }
 
                         if (customerPhone && customerPhone.includes(phoneNumber)) {
                             found = true;
-                            customerData = {name: name, phone: customerPhone, status: status, numberOfCustomers: numberOfCustomers};
+                            customerData = {name: name, phone: customerPhone, status: status, numberOfCustomers: numberOfCustomers, time: time};
                         }
                     }
 
@@ -132,12 +133,14 @@
                                     <label>ลูกค้า</label>
                                     <div class="value">${customerData.numberOfCustomers} pax</div>
                                 </div>
+                                <div class="row">
+                                    <label>เวลา</label>
+                                    <div class="value">${customerData.time}</div>
+                                </div>
                                 <!-- Footer inside info-box -->
                                 <div class="footer-info">
                                     <p>หมายเหตุ: หากไม่สามารถติดต่อหรือไม่แสดงตัวภายใน 10 นาทีหลังจากการติดต่อ คิวของท่านจะถูกยกเลิก</p>
                                 </div>
-                            </div>
-
                             </div>
                         `;
                     }
